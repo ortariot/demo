@@ -3,7 +3,6 @@
 ## ABOUT
 
 ## AUTHORS
- - Egor Letov
+ - Egor Letov e.letov@mail.ru
  - Jhon Lenon
-
  
