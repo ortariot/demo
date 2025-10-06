@@ -1,0 +1,12 @@
+[default]
+db_name = "my_db"
+db_host = "localhost"
+db_port = "5432"
+
+
+[test]
+db_name = "test_db"
+db_host = "stage"
+db_port = "15432"
+
+
