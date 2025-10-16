@@ -51,8 +51,25 @@ class ClassDecorator:
             count +=1 
             print(count)     
 
+def param_class_decor(count):
+    class ClassDecorator:
+        def __init__(self, func):
+            functools.update_wrapper(self, func)
+            self.func = func
+            self.count = count
 
-@ClassDecorator
+        def __call__(self, *arg, **kwargs):
+            count = 0
+            while count < self.count:
+                self.func(*arg, **kwargs)
+                count +=1 
+                print(count)     
+
+    return ClassDecorator
+
+
+
+@param_class_decor(29)
 def privet():
     """ Say Hello"""
     print("Hello")
